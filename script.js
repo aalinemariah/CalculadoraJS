@@ -50,6 +50,23 @@
       falar(value); 
     }
 
+  const simbolosParaFala = {
+            '+': 'mais',
+            '-': 'menos',
+            '*': 'vezes',
+            '/': 'dividido por',
+            '.': 'ponto',
+            '=': 'igual'
+    };
+           function appendValue(value) {
+            display.value += value;
+            
+            // Usa o mapeamento para falar a palavra correspondente ao símbolo
+            const fala = simbolosParaFala[value] || value;
+            falar(fala);
+     }
+    
+
     function clearDisplay() {
       display.value = "";
       falar("limpando");
